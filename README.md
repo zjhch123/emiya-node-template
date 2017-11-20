@@ -46,6 +46,11 @@ module.exports = db.defineModel('Student', {
 
 ### 4. 添加Controller
 在 `controller` 中创建js文件, 例如`controller/student.js`, 文件内容可以参照[user.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/user.js)或者[index.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/index.js)
+在`js`文件内的`module.exports`中请必须遵守
+```
+"[请求方法] [路由]": [处理路由的方法]
+```
+这种写法, [中间件](https://github.com/zjhch123/emiya-node-template/blob/master/src/middleware/addController.js)会自动扫描`controller`内的js文件并自动对路由进行处理
 
 ### 5. 开启/关闭 跨域
 [app.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/app.js#L28)第28行
