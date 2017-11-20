@@ -43,10 +43,12 @@ module.exports = db.defineModel('Student', {
 })
 ```
 其中db为对Sequelize的二次封装, 可见[db.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/db.js)
+
 [model.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/model.js)会自动扫描`models`内的js文件并处理数据表。默认情况下, 在开发模式中, 访问[http://127.0.0.1:3000/drop](http://127.0.0.1:3000/drop)可以重新建立表结构。详见[controller/index.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/index.js#L24)
 
 ### 4. 添加Controller
 在 `controller` 中创建js文件, 例如`controller/student.js`, 文件内容可以参照[user.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/user.js)或者[index.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/index.js)
+
 在`js`文件内的`module.exports`中请必须遵守
 ```
 "[请求方法] [路由]": [处理路由的方法]
