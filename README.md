@@ -27,7 +27,7 @@
 在这个文件中可以设置程序相关路径
 
 ### 3. 添加Model
-在 `models` 中创建js文件, 例如`modes/Student.js`, 在文件中可定义Model相关属性
+在 `models` 中创建js文件, 例如`models/Student.js`, 在文件中可定义Model相关属性
 ```
 // Example
 const db = require('../db')
@@ -43,6 +43,7 @@ module.exports = db.defineModel('Student', {
 })
 ```
 其中db为对Sequelize的二次封装, 可见[db.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/db.js)
+[model.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/model.js)会自动扫描`models`内的js文件并处理数据表。默认情况下, 在开发模式中, 访问[http://127.0.0.1:3000/drop](http://127.0.0.1:3000/drop)可以重新建立表结构。详见[controller/index.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/index.js#L24)
 
 ### 4. 添加Controller
 在 `controller` 中创建js文件, 例如`controller/student.js`, 文件内容可以参照[user.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/user.js)或者[index.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/controller/index.js)
@@ -50,7 +51,7 @@ module.exports = db.defineModel('Student', {
 ```
 "[请求方法] [路由]": [处理路由的方法]
 ```
-这种写法, [中间件](https://github.com/zjhch123/emiya-node-template/blob/master/src/middleware/addController.js)会自动扫描`controller`内的js文件并自动对路由进行处理
+这种写法, [中间件](https://github.com/zjhch123/emiya-node-template/blob/master/src/middleware/addController.js)会自动扫描`controller`文件夹内的js文件并自动对路由进行处理
 
 ### 5. 开启/关闭 跨域
 [app.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/app.js#L28)第28行
