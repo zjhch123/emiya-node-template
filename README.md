@@ -2,7 +2,7 @@
 [Emiya](https://github.com/zjhch123/emiya)
 ## 使用
 ```
-1. git clone 
+1. git clone https://github.com/zjhch123/emiya-node-template.git
 2. cd 
 3. npm i
 4. npm run dev
