@@ -59,7 +59,7 @@ module.exports = db.defineModel('Student', {
 [app.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/app.js#L28)第28行
 
 ### 6. 静态资源
-静态资源文件存放在public目录下, 其是通过`koa-static`进行访问的
+静态资源文件存放在public目录下, 其是通过`koa-static`进行访问的, 其配置可见[app.js](https://github.com/zjhch123/emiya-node-template/blob/master/src/app.js#L25)
 
 
 
