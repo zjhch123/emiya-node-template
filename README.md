@@ -3,7 +3,7 @@
 ## 使用
 ```
 1. git clone https://github.com/zjhch123/emiya-node-template.git
-2. cd 
+2. cd emiya-node-template
 3. npm i
 4. npm run dev
 5. go to http://127.0.0.1:3000/
