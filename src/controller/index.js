@@ -9,7 +9,7 @@ const fn_index = async (ctx, next) => {
 }
 
 module.exports = {
-  "GET /": fn_index
+  "GET /index/": fn_index
 }
 
 if (process.env.NODE_ENV === 'develop') {
@@ -21,5 +21,5 @@ if (process.env.NODE_ENV === 'develop') {
       msg: 'drop ok'
     }
   }
-  module.exports["GET /drop"] = fn_drop
+  module.exports["GET /index/drop"] = fn_drop
 }
